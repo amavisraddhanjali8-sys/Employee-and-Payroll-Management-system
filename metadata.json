@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Remix: Enterprise Payroll Pro",
+  "description": "A production-ready Payroll Management System with automated paysheet generation, APIT/EPF calculations, and statutory compliance.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}

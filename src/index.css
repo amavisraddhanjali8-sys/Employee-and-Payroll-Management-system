@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-primary: #2563eb;
+  --color-brand-secondary: #3b82f6;
+  --color-brand-accent: #eff6ff;
+  --color-brand-dark: #0f172a;
+  
+  --color-surface-bg: #f8fafc;
+  --color-card-bg: #ffffff;
+  --color-sidebar-bg: #ffffff;
+  
+  --color-text-main: #1e293b;
+  --color-text-muted: #64748b;
+  --color-text-light: #94a3b8;
+}
+
+@layer base {
+  html {
+    font-size: 12px;
+  }
+  body {
+    @apply bg-surface-bg text-text-main font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white rounded-lg border border-slate-200 shadow-sm transition-all hover:shadow-md;
+  }
+  
+  .sidebar-item {
+    @apply flex items-center space-x-2 px-2 py-1 rounded-md transition-all duration-200 text-text-muted hover:text-brand-primary hover:bg-brand-accent text-[11px];
+  }
+  
+  .sidebar-item.active {
+    @apply bg-brand-accent text-brand-primary font-semibold;
+  }
+  
+  .nav-pill {
+    @apply px-2 py-0.5 rounded-full text-[10px] font-medium transition-all border border-slate-200 text-text-muted hover:text-brand-primary hover:bg-brand-accent;
+  }
+  
+  .nav-pill.active {
+    @apply bg-brand-primary text-white border-brand-primary;
+  }
+
+  .btn-primary {
+    @apply bg-brand-primary text-white px-2 py-1 rounded-md text-[11px] font-medium hover:bg-brand-secondary transition-all shadow-sm active:scale-95;
+  }
+
+  .input-field {
+    @apply w-full bg-white border border-slate-200 rounded-md px-2 py-1 outline-none focus:ring-1 focus:ring-brand-primary/20 focus:border-brand-primary transition-all text-[11px];
+  }
+}
+
